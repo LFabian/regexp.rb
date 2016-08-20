@@ -1,5 +1,5 @@
 
-
+#A method that returns account number it is correct 
 def account_number(string)
     if string.scan(/\b\d{4}\b/).empty? == false
     re = /\d{4}-\d{3}-\d{3}/
@@ -9,6 +9,7 @@ def account_number(string)
   end      
 end 
 
+#A method that returns account number if there is one in the string 
 def find_account(string)
   if string.scan(/\b\d{4}\b/).empty? == false
     re = /\d{4}-\d{3}-\d{3}/
@@ -19,6 +20,7 @@ def find_account(string)
   end
 end 
 
+#A method that returns account number in an array if there is one in the string 
 def account_array(string)
   if string.scan(/\b\d{4}\b/).empty? == false
     re = /\d{4}-\d{3}-\d{3}/
@@ -28,12 +30,13 @@ def account_array(string)
   end   
 end 
 
+#A method that returns account number hidden if there is one in the string 
 def hiding_account(string)
   re = /\d{4}-\d{3}-\d{3}/ 
   if re.match string 
     match1 = re.match string
     account = match1[0]
-    p "XXXX-XXX-#{account[-3..-1]}"
+    "XXXX-XXX-#{account[-3..-1]}"
   end 
 end 
 
